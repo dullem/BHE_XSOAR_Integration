@@ -295,7 +295,6 @@ def refine_attack_path_list(aps,ap_type):
                     muted = "False"
             except:
                 muted = "Unknown"
-            #muted="test"
             refined_aps.append({"from_dn":from_dn,"from_name":from_name,"from_tags":from_tags,"to_dn":to_dn,"to_name":to_name,"to_tags":to_tags,"created":created,"updated":updated,"muted":muted})
     # Update this list over time to include Attack Path types where there is not a From and To Principle
     elif ap_type in ("Kerberoasting","T0MarkSensitive"):
