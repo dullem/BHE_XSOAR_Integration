@@ -94,11 +94,9 @@ class Client(object):
     def get_version(self) -> APIVersion:
         response = self._request("GET", "/api/version")
         payload = response.json()
-        #print(payload)
 
         return APIVersion(api_version=payload["api_version"], server_version=payload["server_version"])
 
-    #def get_domains(self) -> list[Domain]:
     def get_domains(self):
         response = self._request("GET", "/api/v1/availabledomains")
         payload = response.json()
